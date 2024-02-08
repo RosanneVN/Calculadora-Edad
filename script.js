@@ -13,9 +13,12 @@ const textFecha = document.querySelector('.text-fecha')
 boton.addEventListener("click", (e) => {
     e.preventDefault();
     let error = validarCampos();
-    error = validarCamposVacios();
+    
+    error = !error ? validarCamposVacios() : error
+
     if (error) {
         textFecha.classList.add("red");
+        resultadoCont.innerHTML = 'Error al ingresar la edad'
     }
     else {
         textFecha.classList.remove("red");
