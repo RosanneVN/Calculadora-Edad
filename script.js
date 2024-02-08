@@ -18,7 +18,10 @@ boton.addEventListener("click", (e) => {
 
     if (error) {
         textFecha.classList.add("red");
-        resultadoCont.innerHTML = 'Error al ingresar la edad'
+        resultadoCont.innerHTML  = ` <div class="resultado">
+        <br/><br/>
+        <p> <span>ERROR ${'    '}</span> ฅ^._.^ฅ</p>
+        </div>`
     }
     else {
         textFecha.classList.remove("red");
